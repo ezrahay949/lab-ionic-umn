@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from './recipes.model';
+import { RecipesService } from './recipes.service';
 
 @Component({
   selector: 'app-recipes',
@@ -8,20 +9,20 @@ import { Recipe } from './recipes.model';
 })
 export class RecipesPage implements OnInit {  
 
-  recipes: Recipe[] = [
-    {
-      id: 'r01',
-      title: 'Gado-gado',
-      imageUrl: 'https://www.bbcgoodfood.com/sites/default/files/recipe/recipe-image/2016/05/gado-gado-salad.jpg',
-      ingredients: [
-        'Tauge', 'Kacang Panjang', 'Jagung', 'Tempe', 'Bumbu Kacang', 'Kecap', 'Kerupuk',
-      ],
-    },
-  ]
+  recipes: Recipe[];
 
-  constructor() { }
+  constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
+    this.recipes = this.recipesService.getAllRecipes();
+  }
+
+  getRecipe(recipeId: string) {
+    return this.recipesService.getRecipe(recipeId);
+  }
+
+  deleteRecipe(recipeId: string) {
+    this.recipes = this.recipesService.deleteRecipe(recipeId);
   }
 
 }
