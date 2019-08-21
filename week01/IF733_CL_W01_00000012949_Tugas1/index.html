@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Budget Planner</title>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css" />
+
+    <style>
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-middle-y {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .text-middle-x {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-smaller {
+            font-size: 12px;
+        }
+
+        .text-small {
+            font-size: 14px;
+        }
+
+        .icon-large {
+            font-size: 40px;
+        }
+
+        .icon-medium {
+            font-size: 24px;
+        }
+
+        .dark {
+            color: #2d2d2d
+        }
+
+        .w-95 {
+            width: 95%;
+            height: auto;
+        }
+
+        .mr-1 {
+            margin-right: 10px;
+        }
+
+        .ml-1 {
+            margin-left: 10px;
+        }
+
+        .mb-1 {
+            margin-bottom: 10px;
+        }
+
+        .mt-1 {
+            margin-top: 10px;
+        }
+
+        .mt-2 {
+            margin-top: 25px;
+        }
+
+        .mb-05 {
+            margin-bottom: 5px;
+        }
+    </style>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <ion-app>
+
+        <ion-header>
+            <ion-toolbar color="primary" class="text-center">
+                <ion-title>Budget Planner</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-alert-controller></ion-alert-controller>
+
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>
+                        Input Pengeluaran
+                    </ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    <ion-item>
+                        <ion-label position="floating">Nama Pengeluaran</ion-label>
+                        <ion-input id="inputNama"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="floating">Jumlah Pengeluaran</ion-label>
+                        <ion-input type="number" id="inputJumlah"></ion-input>
+                    </ion-item>
+                    <div class="mt-2 mb-1 text-right">
+                        <ion-button color="danger" fill="outline" onclick="hapus()">
+                            <ion-icon slot="start" name="close"></ion-icon>
+                            Hapus
+                        </ion-button>
+                        <ion-button color="primary" onclick="tambah()">
+                            <ion-icon slot="start" name="add"></ion-icon>
+                            Tambah
+                        </ion-button>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+
+            <ion-list id="listPengeluaran">
+            </ion-list>
+
+            <ion-item>
+                <ion-label>
+                    <strong>
+                        Total: 
+                        <span id="outputTotal">Rp 0.00</span>
+                    </strong>
+                </ion-label>
+            </ion-item>
+
+        </ion-content>
+
+    </ion-app>
+
+</body>
+
+</html>

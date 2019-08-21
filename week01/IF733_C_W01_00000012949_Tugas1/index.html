@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>YouVersion</title>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css"/>
+
+    <style>
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-middle-y {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .text-middle-x {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-smaller {
+            font-size: 12px;
+        }
+
+        .text-small {
+            font-size: 14px;
+        }
+
+        .icon-large {
+            font-size: 40px;
+        }
+
+        .icon-medium {
+            font-size: 24px;
+        }
+
+        .dark {
+            color: #2d2d2d
+        }
+
+        .w-95 {
+            width: 95%;
+            height: auto;
+        }
+        
+        .mr-1 {
+            margin-right: 10px;
+        }
+
+        .ml-1 {
+            margin-left: 10px;
+        }
+
+        .mb-1 {
+            margin-bottom: 10px;
+        }
+
+        .mt-1 {
+            margin-top: 10px;
+        }
+        
+        .mb-05 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <ion-app>
+
+        <ion-header>
+            <ion-toolbar>
+                <ion-buttons slot="secondary">
+                    <ion-button>
+                        <ion-icon slot="icon-only" name="contact"></ion-icon>
+                    </ion-button>
+                    <ion-avatar style="padding: 12px">
+                        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                    </ion-avatar>
+                </ion-buttons>
+                <ion-title>MyVersion</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-card>
+                <ion-card-header>
+                    <ion-row>
+                        <ion-col size="2">
+                            <ion-card-subtitle>Streak</ion-card-subtitle>
+                            <ion-card-title color="success">5 <ion-icon name="flash"></ion-icon>
+                            </ion-card-title>
+                        </ion-col>
+                        <ion-col>
+                            <ion-card-subtitle>Perfect weeks</ion-card-subtitle>
+                            <ion-card-title color="success">6 <ion-icon name="medical"></ion-icon>
+                            </ion-card-title>
+                        </ion-col>
+                        <ion-col size="3">
+                            <ion-buttons style="float: right;">
+                                <ion-button color="success">
+                                    <span class="text-small">More</span>
+                                </ion-button>
+                            </ion-buttons>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-header>
+            
+                <ion-footer>
+                    <ion-toolbar>
+                        <ion-row class="text-center mr-1 ml-1 mt-1 mb-1">
+                            <ion-col>
+                                <div class="mb-05">M</div>
+                                <ion-icon name="radio-button-on" color="success"></ion-icon>
+                            </ion-col>
+                            <ion-col>
+                                <div class="mb-05">T</div>
+                                <ion-icon name="radio-button-on" color="success"></ion-icon>
+                            </ion-col>
+                            <ion-col>
+                                <div class="mb-05">W</div>
+                                <ion-icon name="radio-button-off" color="success"></ion-icon>
+                            </ion-col>
+                            <ion-col>
+                                <div class="mb-05">T</div>
+                                <ion-icon name="radio-button-off" color="success"></ion-icon>
+                            </ion-col>
+                            <ion-col>
+                                <div class="mb-05">F</div>
+                                <ion-icon name="radio-button-off" color="success"></ion-icon>
+                            </ion-col>
+                            <ion-col>
+                                <div class="mb-05">S</div>
+                                <ion-icon name="radio-button-off" color="success"></ion-icon>
+                            </ion-col>
+                            <ion-col>
+                                <div class="mb-05">S</div>
+                                <ion-icon name="radio-button-off" color="success"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                    </ion-toolbar>
+                </ion-footer>
+            </ion-card>
+
+            <ion-card>
+                <ion-card-header>
+                    <ion-row>
+                        <ion-col size="2" class="text-center text-middle-y">
+                            <ion-icon name="sunny" class="icon-large dark"></ion-icon>
+                        </ion-col>
+                        <ion-col>
+                            <ion-card-subtitle>Verse of the day</ion-card-subtitle>
+                            <ion-card-title>Matius 6:7-8 TB</ion-card-title>
+                        </ion-col>
+                        <ion-col size="2" class="text-smaller text-right">
+                            Today
+                        </ion-col>
+                    </ion-row>
+                </ion-card-header>
+            
+                <ion-card-content>
+                    Lagipula dalam doamu itu janganlah kamu bertele-tele seperti
+                    kebiasaan orang yang tidak mengenal Allah. Mereka menyangka...
+                </ion-card-content>
+                
+                <ion-footer>
+                    <ion-toolbar>
+                        <ion-buttons slot="start">
+                            <div class="ml-1">
+                                <ion-button color="success">
+                                    <span class="text-small">View All</span>
+                                </ion-button>
+                            </div>
+                        </ion-buttons>
+                        <ion-buttons slot="secondary">
+                            <ion-button color="medium">
+                                <ion-icon slot="icon-only" name="share"></ion-icon>
+                            </ion-button>
+                            <ion-button color="medium">
+                                <ion-icon slot="icon-only" name="photos"></ion-icon>
+                            </ion-button>
+                            <ion-button color="medium">
+                                <ion-icon slot="icon-only" name="more"></ion-icon>
+                            </ion-button>
+                        </ion-buttons>
+                    </ion-toolbar>
+                </ion-footer>
+            </ion-card>
+
+            <ion-card>
+                <ion-card-header>
+                    <ion-row>
+                        <ion-col size="2" class="text-center">
+                            <ion-icon name="photos" class="icon-medium dark"></ion-icon>
+                        </ion-col>
+                        <ion-col class="text-middle-y">
+                            <ion-card-subtitle>Verse of the day image</ion-card-subtitle>
+                        </ion-col>
+                        <ion-col size="2" class="text-smaller text-right">
+                            Today
+                        </ion-col>
+                    </ion-row>
+                </ion-card-header>
+
+                <ion-card-content>
+                    <ion-thumbnail class="w-95 text-middle-x mb-1">
+                        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                    </ion-thumbnail>
+                </ion-card-content>
+
+                <ion-footer>
+                    <ion-toolbar>
+                        <ion-buttons slot="start">
+                            <div class="ml-1">
+                                <ion-button color="success">
+                                    <span class="text-small">Share</span>
+                                </ion-button>
+                            </div>
+                        </ion-buttons>
+                        <ion-buttons slot="secondary">
+                            <ion-button color="medium">
+                                <ion-icon slot="icon-only" name="more"></ion-icon>
+                            </ion-button>
+                        </ion-buttons>
+                    </ion-toolbar>
+                </ion-footer>
+            </ion-card>
+        </ion-content>
+
+        <ion-footer>
+            <ion-tab-bar slot="bottom">
+                <ion-tab-button tab="tab-home">
+                    <ion-icon name="home"></ion-icon>
+                    <ion-label>Home</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button tab="tab-read">
+                    <ion-icon name="book"></ion-icon>
+                    <ion-label>Read</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button tab="tab-plans">
+                    <ion-icon name="checkmark"></ion-icon>
+                    <ion-label>Plans</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button tab="tab-search">
+                    <ion-icon name="search"></ion-icon>
+                    <ion-label>Search</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button tab="tab-more">
+                    <ion-icon name="menu"></ion-icon>
+                    <ion-label>Menu</ion-label>
+                </ion-tab-button>
+            </ion-tab-bar>
+        </ion-footer>
+    
+    </ion-app>
+
+</body>
+</html>
