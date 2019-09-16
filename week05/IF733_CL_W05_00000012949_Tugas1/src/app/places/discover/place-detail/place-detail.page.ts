@@ -47,4 +47,24 @@ export class PlaceDetailPage implements OnInit {
                 }
             });
     }
+
+    async presentActionSheet() {
+        const actionSheet = document.createElement('ion-action-sheet');
+
+        actionSheet.header = "Book Place";
+        actionSheet.buttons = [{
+            text: 'Book with Random Date',
+            icon: 'add',
+            handler: () => {
+                this.onBookPlace();
+            }
+        }, {
+            text: 'Cancel',
+            icon: 'close',
+            role: 'cancel',
+            handler: () => {}
+        }];
+        document.body.appendChild(actionSheet);
+        return actionSheet.present();
+    }
 }
