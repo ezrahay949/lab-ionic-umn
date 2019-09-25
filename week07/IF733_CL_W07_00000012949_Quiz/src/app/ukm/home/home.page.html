@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>UMN UKM</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12" size-sm="8" offset-sm="2">
+                <ion-virtual-scroll [items]="loadedUkm" approx-item-height="104px">
+                    <ion-card *virtualItem="let ukm">
+                        <ion-card-header>
+                            <ion-card-title>{{ ukm.name }}</ion-card-title>
+                        </ion-card-header>
+
+                        <ion-card-content>
+                            {{ ukm.description }}
+                            <ion-button class="ion-float-right ion-margin-bottom" fill="outline" size="small" (click)="presentAlertJoin(ukm)">Join</ion-button>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-virtual-scroll>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
