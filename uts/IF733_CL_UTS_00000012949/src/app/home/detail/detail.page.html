@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ album.name }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            <ion-label color="medium"><b class="ion-text-uppercase">Songs</b></ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let song of album.songs">
+            <ion-label>
+                <h2><b>{{ song.title }}</b></h2>
+                <p class="ez-text-color-primary">{{ song.minute }} minutes {{ song.second }} seconds</p>
+            </ion-label>
+            <ion-icon slot="end" [name]="showFavorite(song.id)" color="warning" [id]="'favorite-icon-' + song.id" (click)="toggleFavorite(song)"></ion-icon>
+        </ion-item>
+    </ion-list>
+    <p class="ion-text-center ez-text-small ez-text-color-medium">
+        {{ album.songs.length == 0 ? 'Empty Album' : 'Total: ' + album.songs.length + (album.songs.length == 1 ? ' Song' : ' Songs')}}
+    </p>
+</ion-content>
